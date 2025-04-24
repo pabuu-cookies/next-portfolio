@@ -52,9 +52,13 @@ const ProjectDialog = ({ isOpen, onClose, project }: ProjectDialogProps) => {
         </div>
 
         <div className="mt-6">
-          <h3 className="text-lg font-semibold mb-2">Project Overview</h3>
-          <p className="text-foreground/80">{project.longDescription}</p>
-        </div>
+  <h3 className="text-lg font-semibold mb-2">Project Overview</h3>
+  <div
+    className="text-foreground/80"
+    dangerouslySetInnerHTML={{ __html: project.longDescription }}
+  />
+</div>
+
 
         <div className="mt-6">
           <h3 className="text-lg font-semibold mb-2">Technologies Used</h3>
